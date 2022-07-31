@@ -1,0 +1,233 @@
+body{
+    font-family: 'Nanum Pen Script', cursive;
+}
+.background-img{
+    background-image: url(img/Group\ 20.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 980px;
+    display: flex;
+    position: relative;
+}
+.plan-img>a>img{
+    padding: 30px;
+    position: fixed;
+}
+.nav-box{
+    position: relative;
+    margin-top: 70px;
+    position: fixed;
+    z-index: 1;
+}
+.nav-list{
+    display: flex;
+    width: 513px;
+    height: 50px;
+    background-color: rgba(139, 179, 202, 0.6);;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 1073px;
+}
+.nav-list>li{
+    margin-left: 30px;
+    font-size: 20px;
+}
+.nav-list>li>a>p{
+    color: #F9F9F9;
+}
+.main-text{
+    color: #F9F9F9;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+.main-text>h1{
+    font-size: 82px;
+    margin-bottom: 6px;
+}
+.main-text>h2{
+    font-size: 22px;
+}
+.main-text>p{
+    font-size: 16px;
+}
+.inner-text{
+    padding: 50px;
+}
+.inner-text>h2{
+    font-size: 36px;
+    text-align: center;
+}
+.inner-text>p{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.about-text{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.about-main{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.about-title{
+    display: flex;
+}
+.about-title>h3{
+    font-size: 28px;
+    margin-bottom: 32px;
+}
+.about-text>p{
+    line-height: 30px;
+}
+.skill-background{
+    width: 100%;
+    height: 894px;
+    background-color: #98C4EB;
+    background-image: url(img/Group\ 16.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.skill-img>ul{
+    display: flex;
+    justify-content: center;
+}
+.skill-img>ul>li{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #F9F9F9;
+    margin-left: 68px;
+}
+.skill-img>ul>li>a>img{
+    margin: 0 auto;
+    margin-top: 65px;
+}
+.skill-img2>ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.skill-img2>ul>li{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #F9F9F9;
+    margin-left: 68px;
+}
+.skill-img2>ul>li>a>img{
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.skill-img>ul>li>p{
+    text-align: center;
+    margin-top: 75px;
+    font-size: 24px;
+}
+.skill-img2>ul>li>p{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 24px;
+}
+.click-button{
+    display: flex;
+    justify-content: center;
+}
+.click-button>button{
+    width: 182px;
+    height: 47px;
+    border: none;
+    margin-right: 15px;
+    background-color: #E9F1F8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    cursor: pointer;
+}
+.portfolio-background{
+    background-image: url(img/Group\ 21.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.portfolio-main{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+.portfolio-text{
+    margin-left: 50px;
+    margin-top: 80px;
+}
+.portfolio-text>h3{
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+.portfolio-text>p{
+    line-height: 28px;
+    margin-bottom: 50px;
+}
+.portfolio-text>button{
+    width: 310px;
+    height: 71px;
+    border: none;
+    background-color: #498ABF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    color: #F9F9F9;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    line-height: 75px;
+    cursor: pointer;
+}
+.portfolio-text>button>img{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.contact-background{
+    background-image: url(img/다운로드\ \(3\)\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 766px;
+}
+.footer-text{
+    margin-top: 50px;
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.footer-text>h2{
+    color: #F9F9F9;
+    font-size: 46px;
+}
+.footer-text>p{
+    color: #F9F9F9;
+    margin-top: 10px;
+}
+.footer-img{
+    display: flex;
+    justify-content: center;
+}
+.mail{
+    color: #F9F9F9;
+    text-align: center;
+    margin-top: 50px;
+}
+.mail>h2{
+    font-size: 40px;
+}
+.mail>p{
+    font-size: 20px;
+    margin-top: 20px;
+}
