@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <title>portfolio</title>
 </head>
 <body>
     <header>
-        <div class="nav-box">
+        <div class="nav">
             <ul class="nav-list">
                 <div class="list-img">
                     <img src="img/Group 18.png" alt="">
@@ -37,6 +38,27 @@
                     </a>
                 </li>
             </ul>
+            <div class="navbox">
+                <img class="iconBtn" id="menuBtn" src="img/Group 25.png" alt="">
+            </div>
+            <div class="menuWrap">
+                <nav id="menu">
+                    <ul class="menuList">
+                        <li class="listStyle">
+                            <a href=""><p>About</p></a>
+                        </li>
+                        <li class="listStyle">
+                            <a href=""><p>Skill</p></a>
+                        </li>
+                        <li class="listStyle">
+                            <a href=""><p>Portfolio</p></a>
+                        </li>
+                        <li class="listStyle">
+                            <a href=""><p>Contact</p></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <div class="background-img">
@@ -88,38 +110,38 @@
             </div>
             <div class="skill-img">
                 <ul>
-                    <li class="skill-graph">
-                        <a href="">
+                    <li class="skill-graph skill-graph1">
+                        <span class="center">
                             <img src="img/Group 10.png" alt="">
-                        </a>
+                        </span>
                         <p>html</p>
                     </li>
-                    <li class="skill-graph">
-                        <a href="">
+                    <li class="skill-graph skill-graph2">
+                        <span class="center">
                             <img src="img/Group 11.png" alt="">
-                        </a>
+                        </span>
                         <p>css</p>
                     </li>
-                    <li class="skill-graph">
-                        <a href="">
+                    <li class="skill-graph skill-graph3">
+                        <span class="center">
                             <img src="img/Vector.png" alt="">
-                        </a>
+                        </span>
                         <p>JQuery</p>
                     </li>
                 </ul>
             </div>
             <div class="skill-img2">
                 <ul>
-                    <li class="skill-graph">
-                        <a href="">
+                    <li class="skill-graph skill-graph4">
+                        <span class="center">
                             <img src="img/Group 8.png" alt="">
-                        </a>
+                        </span>
                         <p>Photoshop</p>
                     </li>
-                    <li class="skill-graph">
-                        <a href="">
+                    <li class="skill-graph skill-graph5">
+                        <span class="center">
                             <img src="img/Group 9.png" alt="">
-                        </a>
+                        </span>
                         <p>illustrator</p>
                     </li>
                 </ul>
@@ -214,6 +236,63 @@
             $(".portfolio-btn").click(function(){
                 $(".portfolio-main").hide();
                 $(".portfolio-main2").show();
+            });
+        });
+
+    $(window).ready(function(){
+    draw(70, '.skill-graph1', '#498ABF');
+    draw(70, '.skill-graph2', '#498ABF');
+    draw(40, '.skill-graph3', '#498ABF');
+    draw(50, '.skill-graph4', '#498ABF');
+    draw(50, '.skill-graph5', '#498ABF');
+    });
+
+    function draw(max, classname, colorname){
+       var i=1;
+        var func1 = setInterval(function(){
+          if(i<max){
+              color1(i,classname,colorname);
+              i++;
+          } else{
+            clearInterval(func1);
+          }
+        },10);
+    }
+    function color1(i, classname,colorname){
+       $(classname).css({
+            "background":"conic-gradient("+colorname+" 0% "+i+"%, #ffffff "+i+"% 100%)"
+       });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+          document
+            .querySelector("#menuBtn")
+            .addEventListener("click", function (e) {
+              if (document.querySelector(".menuWrap").classList.contains("on")) {
+                //메뉴 slide
+                document.querySelector(".menuWrap").classList.remove("on");
+                document.getElementById("menuBtn").src = "img/Group 25.png";
+                document.querySelector("#dimmed").remove();
+              } else {
+                //메뉴 slideIn
+                document.querySelector(".menuWrap").classList.add("on");
+                document.getElementById("menuBtn").src = "img/Group 25.png";
+                let div = document.createElement("div");
+                div.id = "dimmed";
+                document.body.append(div);
+  
+                //페이지 스크롤 락  모바일 이벤트 차단
+                document
+                  .querySelector("#dimmed")
+                  .addEventListener(
+                    "scroll touchmove touchend mousewheel",
+                    function (e) {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      return false;
+                    }
+                  );
+              }
             });
         });
 </script>
