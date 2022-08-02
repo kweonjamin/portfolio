@@ -1,12 +1,14 @@
-body{
+h1,h2,h3,button,p,a{
     font-family: 'Nanum Pen Script', cursive;
+}
+.about-text>p , .portfolio-text>p{
+    font-family: 'Nanum Gothic', sans-serif;
 }
 .plan-img>a>img{
     padding: 30px;
     position: fixed;
 }
-.nav-box{
-    position: absolute;
+.nav{
     z-index: 1;
     position: relative;
 }
@@ -16,22 +18,54 @@ body{
 }
 .nav-list{
     display: flex;
-    width: 500px;
+    width: 450px;
     height: 50px;
     background-color: rgba(139, 179, 202, 0.6);;
     border-radius: 50px;
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 973px;
+    left: 55%;
     top: 97px;
 }
 .nav-list>li{
     margin-right: 30px;
-    font-size: 20px;
+    font-size: 28px;
 }
 .nav-list>li>a>p{
     color: #F9F9F9;
+}
+.iconBtn{
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.menuWrap.on{
+    right: 0;
+}
+.menuWrap{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 400;
+    width: 300px;
+    height: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    transition: right 0.3s ease-in-out;
+    background-color: rgba(44, 62, 78, 0.7);
+}
+.menuList{
+    margin-top: 120px;
+}
+.menuList>.listStyle>a>p{
+    color: #F9F9F9;
+    font-size: 60px;
+    line-height: 100px;
+    text-align: center;
 }
 .background-img{
     background-image: url(img/Group\ 20.png);
@@ -43,6 +77,11 @@ body{
     display: flex;
     position: relative;
 }
+#menuBtn{
+    z-index: 401;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
 .main-text{
     color: #F9F9F9;
     position: absolute;
@@ -51,24 +90,27 @@ body{
     left: 50%;
 }
 .main-text>h1{
-    font-size: 82px;
+    font-size: 120px;
     margin-bottom: 6px;
+    font-weight: 500;
 }
 .main-text>h2{
-    font-size: 22px;
+    font-size: 40px;
+    font-weight: 400;
 }
 .main-text>p{
-    font-size: 16px;
+    font-size: 32px;
 }
 .inner-text{
     padding: 50px;
 }
 .inner-text>h2{
-    font-size: 36px;
+    font-size: 52px;
     text-align: center;
+    font-weight: 400;
 }
 .inner-text>p{
-    font-size: 14px;
+    font-size: 22px;
     text-align: center;
     margin-top: 10px;
 }
@@ -85,8 +127,9 @@ body{
     display: flex;
 }
 .about-title>h3{
-    font-size: 28px;
+    font-size: 46px;
     margin-bottom: 32px;
+    font-weight: 500;
 }
 .about-text>p{
     line-height: 30px;
@@ -103,46 +146,51 @@ body{
     display: flex;
     justify-content: center;
 }
-.skill-img>ul>li{
+.skill-graph {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background-color: #F9F9F9;
     margin-left: 68px;
     position: relative;
+    transition: 0.3s;
+    background-color: rgb(17, 19, 19);
 }
-.skill-text{
-    display: none;
+span.center{
+    background: #fff;
+    display : block;
+    position: absolute;
+    top:50%; left:50%;
+    width:220px;
+    height:220px;
+    border-radius: 50%;
+    text-align:center;
+    transform: translate(-50%, -50%);
 }
-.skill-img>ul>li>a>img{
+.skill-img>ul>li>span>img{
     margin: 0 auto;
-    margin-top: 65px;
+    margin-top: 55px;
 }
 .skill-img2>ul{
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
-.skill-img2>ul>li{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background-color: #F9F9F9;
+.skill-img2>ul>li{ 
     margin-left: 68px;
 }
-.skill-img2>ul>li>a>img{
+.skill-img2>ul>li>span>img{
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 70px;
 }
 .skill-img>ul>li>p{
     text-align: center;
-    margin-top: 75px;
-    font-size: 24px;
+    margin-top: 260px;
+    font-size: 26px;
 }
 .skill-img2>ul>li>p{
     text-align: center;
-    margin-top: 100px;
-    font-size: 24px;
+    margin-top: 265px;
+    font-size: 26px;
 }
 .click-button{
     display: flex;
@@ -155,8 +203,9 @@ body{
     margin-right: 15px;
     background-color: #E9F1F8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 20px;
+    font-size: 36px;
     cursor: pointer;
+    font-weight: 400;
 }
 .portfolio-img>a>img{
     width: 617px;
@@ -184,8 +233,9 @@ body{
     margin-top: 80px;
 }
 .portfolio-text>h3{
-    font-size: 32px;
+    font-size: 58px;
     margin-bottom: 50px;
+    font-weight: 400;
 }
 .portfolio-text>p{
     line-height: 28px;
@@ -199,7 +249,7 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
     color: #F9F9F9;
-    font-size: 26px;
+    font-size: 48px;
     display: flex;
     justify-content: center;
     line-height: 75px;
@@ -225,11 +275,13 @@ body{
 }
 .footer-text>h2{
     color: #F9F9F9;
-    font-size: 46px;
+    font-size: 68px;
+    font-weight: 500;
 }
 .footer-text>p{
     color: #F9F9F9;
     margin-top: 10px;
+    font-size: 42px;
 }
 .footer-img{
     display: flex;
@@ -238,14 +290,22 @@ body{
 .mail{
     color: #F9F9F9;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 .mail>h2{
-    font-size: 40px;
+    font-size: 62px;
+    font-weight: 500;
 }
 .mail>p{
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 40px;
+}
+@media screen and (max-width:1025px) {
+    .iconBtn{
+        display: block;
+    }
+    .nav-list{
+        display: none;
+    }
 }
 @media screen and (max-width:980px) {
     .j-img>img{
@@ -258,29 +318,35 @@ body{
     .skill-background{
         height: 700px;
     }
-    .skill-img>ul>li>a>img{
-        margin-top: 45px;
-    }
-    .skill-img>ul>li{
+    .skill-graph {
         width: 200px;
         height: 200px;
-        margin-left: 40px;
+        margin-left: 38px;
+    }
+    span.center{
+        width:160px;
+        height:160px;
     }
     .skill-img2>ul>li{
-        width: 200px;
-        height: 200px;
-        margin-left: 40px;
-    }
-    .skill-img2>ul>li>a>img{
-        margin-top: 60px;
+        margin-left: 38px;
     }
     .skill-img>ul>li>p{
-        margin-top: 45px;
-        font-size: 18px;
+        margin-top: 210px;
+        font-size: 28px;
     }
     .skill-img2>ul>li>p{
-        margin-top: 65px;
-        font-size: 18px;
+        margin-top: 215px;
+        font-size: 28px;
+    }
+    .skill-img>ul>li>span>img{
+        width: 80px;
+        height: 90px;
+        margin-top: 35px;
+    }
+    .skill-img2>ul>li>span>img{
+        width: 80px;
+        height: 70px;
+        margin-top: 50px;
     }
     .portfolio-img>a>img{
         width: 490px;
@@ -289,7 +355,7 @@ body{
     .portfolio-text>button{
         width: 227px;
         height: 52px;
-        font-size: 20px;
+        font-size: 36px;
         line-height: 55px;
     }
     .portfolio-text{
@@ -299,7 +365,7 @@ body{
         margin-top: 10px;
     }
     .portfolio-text>h3{
-        font-size: 28px;
+        font-size: 46px;
         margin-bottom: 30px;
     }
     .portfolio-text>p{
@@ -308,7 +374,7 @@ body{
     .click-button>button{
         width: 162px;
         height: 40px;
-        font-size: 18px;
+        font-size: 32px;
     }
 }
 @media screen and (max-width:750px) {
@@ -326,37 +392,35 @@ body{
     .skill-img{
         margin-top: 50px;
     }
-    .skill-img>ul>li{
+    .skill-graph {
         width: 145px;
         height: 145px;
         margin-left: 20px;
+    }
+    span.center{
+        width:115px;
+        height:115px;
     }
     .skill-img2>ul>li{
-        width: 145px;
-        height: 145px;
         margin-left: 20px;
     }
-    .skill-img>ul>li>a>img{
-        width: 80px;
-        height: 90px;
-    }
-    .skill-img>ul>li>a>img{
-        margin-top: 35px;
-    }
-    .skill-img2>ul>li>a>img{
-        width: 80px;
+    .skill-img>ul>li>span>img{
+        width: 60px;
         height: 70px;
+        margin-top: 25px;
     }
-    .skill-img2>ul>li>a>img{
-        margin-top: 40px;
+    .skill-img2>ul>li>span>img{
+        width: 60px;
+        height: 50px;
+        margin-top: 30px;
     }
     .skill-img>ul>li>p{
-        margin-top: 35px;
-        font-size: 16px;
+        margin-top: 150px;
+        font-size: 22px;
     }
     .skill-img2>ul>li>p{
-        margin-top: 50px;
-        font-size: 16px;
+        margin-top: 155px;
+        font-size: 22px;
     }
     .portfolio-main{
         display: block;
@@ -377,7 +441,7 @@ body{
         text-align: center;
     }
     .portfolio-text>h3{
-        font-size: 26px;
+        font-size: 38px;
         margin-bottom: 20px;
     }
     .portfolio-text>p{
@@ -387,12 +451,12 @@ body{
     .click-button>button{
         width: 152px;
         height: 30px;
-        font-size: 14px;
+        font-size: 26px;
     }
     .portfolio-text>button{
         width: 167px;
         height: 38px;
-        font-size: 16px;
+        font-size: 26px;
         line-height: 40px;
         border-radius: 10px;
         margin: 0 auto;
@@ -406,7 +470,58 @@ body{
         width: 409px;
         height: 313px;
     }
+    .mail>h2{
+        font-size: 50px;
+    }
 }
 @media screen and (max-width:500px) {
-
+    .main-text>h1{
+        font-size: 100px;
+        margin-bottom: 6px;
+    }
+    .main-text>h2{
+        font-size: 36px;
+    }
+    .main-text>p{
+        font-size: 30px;
+    }
+    .skill-graph {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+    }
+    span.center{
+        width:80px;
+        height:80px;
+    }
+    .skill-img>ul>li>span>img{
+        width: 40px;
+        height: 50px;
+        margin-top: 20px;
+    }
+    .skill-img2>ul>li>span>img{
+        width: 40px;
+        height: 30px;
+        margin-top: 26px;
+    }
+    .skill-img>ul>li>p{
+        margin-top: 100px;
+        font-size: 22px;
+    }
+    .skill-img2>ul>li>p{
+        margin-top: 105px;
+        font-size: 22px;
+    }
+    .portfolio-img>a>img{
+        width: 347px;
+        height: 334px;
+        margin: 0 auto;
+    }
+    .footer-img>img{
+        width: 346px;
+        height: 265px;
+    }
+    .mail>h2{
+        font-size: 40px;
+    }
 }
