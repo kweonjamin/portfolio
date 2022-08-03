@@ -32,7 +32,7 @@ h1,h2,h3,button,p,a{
     margin-right: 30px;
     font-size: 28px;
 }
-.nav-list>li>a>p{
+.nav-list>li>a{
     color: #F9F9F9;
 }
 .iconBtn{
@@ -62,7 +62,7 @@ h1,h2,h3,button,p,a{
 .menuList{
     margin-top: 120px;
 }
-.menuList>.listStyle>a>p{
+.menuList>li>a>p{
     color: #F9F9F9;
     font-size: 60px;
     line-height: 100px;
@@ -155,9 +155,6 @@ h1,h2,h3,button,p,a{
     position: relative;
     transition-duration: 0.3s;
     background-color: #F9F9F9;
-}
-.skill-graph1{
-    transition-delay: 5s;
 }
 span.center{
     background: #F9F9F9;
