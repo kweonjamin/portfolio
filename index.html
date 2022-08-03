@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <title>portfolio</title>
@@ -17,24 +18,24 @@
                 <div class="list-img">
                     <img src="img/Group 18.png" alt="">
                 </div>
-                <li>
-                    <a href="">
-                        <p>About</p>
+                <li class="listStyle1">
+                    <a href="#about">
+                        About
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        <p>Skill</p>
+                <li class="listStyle2">
+                    <a href="#skill">
+                        Skill
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        <p>Portfolio</p>
+                <li class="listStyle3">
+                    <a href="#portfolio">
+                        Portfolio
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        <p>Contact</p>
+                <li class="listStyle4">
+                    <a href="#contact">
+                        Contact
                     </a>
                 </li>
             </ul>
@@ -44,17 +45,17 @@
             <div class="menuWrap">
                 <nav id="menu">
                     <ul class="menuList">
-                        <li class="listStyle">
-                            <a href=""><p>About</p></a>
+                        <li class="listStyle1">
+                            <a href="#about"><p>About</p></a>
                         </li>
-                        <li class="listStyle">
-                            <a href=""><p>Skill</p></a>
+                        <li class="listStyle2">
+                            <a href="#skill"><p>Skill</p></a>
                         </li>
-                        <li class="listStyle">
-                            <a href=""><p>Portfolio</p></a>
+                        <li class="listStyle3">
+                            <a href="#portfolio"><p>Portfolio</p></a>
                         </li>
-                        <li class="listStyle">
-                            <a href=""><p>Contact</p></a>
+                        <li class="listStyle4">
+                            <a href="#contact"><p>Contact</p></a>
                         </li>
                     </ul>
                 </nav>
@@ -63,7 +64,7 @@
     </header>
     <div class="background-img">
         <div class="plan-img">
-            <a href="">
+            <a href="#top">
                 <img src="img/Group 22.png" alt="">
             </a>        
         </div>
@@ -78,7 +79,7 @@
             </div>
         </div>  
     </div>
-    <section class="about">
+    <section id="about">
         <div class="inner-text">
             <h2>About</h2>
             <p>저로 말할것 같으면...</p>
@@ -102,7 +103,7 @@
             </div>
         </div>
     </section>
-    <section class="skill">
+    <section id="skill">
         <div class="skill-background">
             <div class="inner-text">
                 <h2>Skill</h2>
@@ -148,7 +149,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio">
         <div class="portfolio-background">
             <div class="inner-text">
                 <h2>Portfolio</h2>
@@ -204,7 +205,7 @@
             </div>
         </div>
     </section>
-    <footer>
+    <footer id="contact">
         <div class="contact-background">
             <div class="footer-text">
                 <h2>contact</h2>
@@ -221,7 +222,7 @@
     </footer>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
 <script>
     $(document).ready(function(){
             /*웹페이지 열었을 때*/
@@ -239,14 +240,20 @@
             });
         });
 
-    $(window).ready(function(){
-    draw(70, '.skill-graph1', '#498ABF');
-    draw(70, '.skill-graph2', '#498ABF');
-    draw(40, '.skill-graph3', '#498ABF');
-    draw(50, '.skill-graph4', '#498ABF');
-    draw(50, '.skill-graph5', '#498ABF');
-    });
+    let play = true;
+    $(window).scroll(function(){
 
+        if($(document).scrollTop()>$('.skill-background')[0].offsetTop){
+            if(play){
+                draw(70, '.skill-graph1', '#498ABF');
+                draw(70, '.skill-graph2', '#498ABF');
+                draw(40, '.skill-graph3', '#498ABF');
+                draw(50, '.skill-graph4', '#498ABF');
+                draw(50, '.skill-graph5', '#498ABF');
+            }
+            play=false
+        }
+    });
     function draw(max, classname, colorname){
        var i=1;
         var func1 = setInterval(function(){
@@ -260,7 +267,7 @@
     }
     function color1(i, classname,colorname){
        $(classname).css({
-            "background":"conic-gradient("+colorname+" 0% "+i+"%, #ffffff "+i+"% 100%)"
+            "background":"conic-gradient("+colorname+" 0% "+i+"%, #f9f9f9 "+i+"% 100%)"
        });
     }
 
@@ -294,6 +301,59 @@
                   );
               }
             });
+        });
+
+        var $root = $('html, body');
+
+        $('.listStyle1 > a').click(function() {
+        
+            $root.animate({
+
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+
+            }, 500);
+
+            return false;
+
+        });
+        var $root = $('html, body');
+
+        $('.listStyle2 > a').click(function() {
+        
+            $root.animate({
+            
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            
+            }, 500);
+        
+            return false;
+        
+        });
+        var $root = $('html, body');
+
+        $('.listStyle3 > a').click(function() {
+        
+            $root.animate({
+            
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            
+            }, 500);
+        
+            return false;
+        
+        });
+        var $root = $('html, body');
+
+        $('.listStyle4 > a').click(function() {
+        
+            $root.animate({
+            
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            
+            }, 500);
+        
+            return false;
+        
         });
 </script>
 </html>
