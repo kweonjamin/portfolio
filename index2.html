@@ -18,24 +18,24 @@
                 <div class="list-img">
                     <img src="img/Group 18.png" alt="">
                 </div>
-                <li class="listStyle1">
-                    <a href="#about">
-                        About
+                <li>
+                    <a href="">
+                        <p>About</p>
                     </a>
                 </li>
-                <li class="listStyle2">
-                    <a href="#skill">
-                        Skill
+                <li>
+                    <a href="">
+                        <p>Skill</p>
                     </a>
                 </li>
-                <li class="listStyle3">
-                    <a href="#portfolio">
-                        Portfolio
+                <li>
+                    <a href="">
+                        <p>Portfolio</p>
                     </a>
                 </li>
-                <li class="listStyle4">
-                    <a href="#contact">
-                        Contact
+                <li>
+                    <a href="">
+                        <p>Contact</p>
                     </a>
                 </li>
             </ul>
@@ -45,17 +45,17 @@
             <div class="menuWrap">
                 <nav id="menu">
                     <ul class="menuList">
-                        <li class="listStyle1">
-                            <a href="#about"><p>About</p></a>
+                        <li class="listStyle">
+                            <a href=""><p>About</p></a>
                         </li>
-                        <li class="listStyle2">
-                            <a href="#skill"><p>Skill</p></a>
+                        <li class="listStyle">
+                            <a href=""><p>Skill</p></a>
                         </li>
-                        <li class="listStyle3">
-                            <a href="#portfolio"><p>Portfolio</p></a>
+                        <li class="listStyle">
+                            <a href=""><p>Portfolio</p></a>
                         </li>
-                        <li class="listStyle4">
-                            <a href="#contact"><p>Contact</p></a>
+                        <li class="listStyle">
+                            <a href=""><p>Contact</p></a>
                         </li>
                     </ul>
                 </nav>
@@ -64,13 +64,13 @@
     </header>
     <div class="background-img">
         <div class="plan-img">
-            <a href="#top">
+            <a href="">
                 <img src="img/Group 22.png" alt="">
             </a>        
         </div>
         <div class="main">
             <div class="main-img">
-                <img src="" alt="">
+                <img src="img/Group 23.svg" alt="">
             </div>
             <div class="main-text">
                 <h2>kweonjaemin</h2>
@@ -79,7 +79,7 @@
             </div>
         </div>  
     </div>
-    <section id="about">
+    <section class="about">
         <div class="inner-text">
             <h2>About</h2>
             <p>저로 말할것 같으면...</p>
@@ -103,7 +103,7 @@
             </div>
         </div>
     </section>
-    <section id="skill">
+    <section class="skill">
         <div class="skill-background">
             <div class="inner-text">
                 <h2>Skill</h2>
@@ -149,7 +149,7 @@
             </div>
         </div>
     </section>
-    <section id="portfolio">
+    <section class="portfolio">
         <div class="portfolio-background">
             <div class="inner-text">
                 <h2>Portfolio</h2>
@@ -205,7 +205,7 @@
             </div>
         </div>
     </section>
-    <footer id="contact">
+    <footer>
         <div class="contact-background">
             <div class="footer-text">
                 <h2>contact</h2>
@@ -239,11 +239,12 @@
                 $(".portfolio-main2").show();
             });
         });
-
     let play = true;
     $(window).scroll(function(){
 
         if($(document).scrollTop()>$('.skill-background')[0].offsetTop){
+            // $(this)
+            //     .delay('.skill-graph1'*500)
             if(play){
                 draw(70, '.skill-graph1', '#498ABF');
                 draw(70, '.skill-graph2', '#498ABF');
@@ -270,6 +271,7 @@
             "background":"conic-gradient("+colorname+" 0% "+i+"%, #f9f9f9 "+i+"% 100%)"
        });
     }
+
 
     document.addEventListener("DOMContentLoaded", function () {
           document
@@ -301,59 +303,6 @@
                   );
               }
             });
-        });
-
-        var $root = $('html, body');
-
-        $('.listStyle1 > a').click(function() {
-        
-            $root.animate({
-
-                scrollTop: $( $.attr(this, 'href') ).offset().top
-
-            }, 500);
-
-            return false;
-
-        });
-        var $root = $('html, body');
-
-        $('.listStyle2 > a').click(function() {
-        
-            $root.animate({
-            
-                scrollTop: $( $.attr(this, 'href') ).offset().top
-            
-            }, 500);
-        
-            return false;
-        
-        });
-        var $root = $('html, body');
-
-        $('.listStyle3 > a').click(function() {
-        
-            $root.animate({
-            
-                scrollTop: $( $.attr(this, 'href') ).offset().top
-            
-            }, 500);
-        
-            return false;
-        
-        });
-        var $root = $('html, body');
-
-        $('.listStyle4 > a').click(function() {
-        
-            $root.animate({
-            
-                scrollTop: $( $.attr(this, 'href') ).offset().top
-            
-            }, 500);
-        
-            return false;
-        
         });
 </script>
 </html>
