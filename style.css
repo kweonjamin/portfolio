@@ -83,6 +83,33 @@ h1,h2,h3,button,p,a{
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
+.main-img {
+    margin-left: 1400px;
+    margin-top: 10px;
+    animation: xAxis 5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+    animation-fill-mode: both;
+}
+.main-img:after {
+    content: "";
+    display: block;
+    width: 292px;
+    height:261px;
+    background-image: url(img/Group\ 23.svg);
+    animation: yAxis 5s infinite cubic-bezier(0.3,0.27,0.07,1.64);
+    animation-fill-mode: both;
+} 
+@keyframes yAxis{
+    100%{
+        animation-timing-function:cubic-bezier(0.02,0.01,0.21,1) ;
+        transform: translatey(400px);
+    }
+}
+@keyframes xAxis{
+    100%{
+        animation-timing-function:cubic-bezier(0.3,0.27,0.07,1.64) ;
+        transform: translatex(-1000px);
+    }
+}
 .main-text{
     color: #F9F9F9;
     position: absolute;
@@ -477,6 +504,15 @@ span.center{
     }
 }
 @media screen and (max-width:500px) {
+    .main-img:after {
+        width: 238px;
+        height:213px;
+        background-size: 100%;
+    } 
+    .main-img {
+        margin-left: 600px;
+        margin-top: 100px;
+    }
     .main-text>h1{
         font-size: 100px;
         margin-bottom: 6px;

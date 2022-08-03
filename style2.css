@@ -77,6 +77,7 @@ h1,h2,h3,button,p,a{
     height: 980px;
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 #menuBtn{
     z-index: 401;
@@ -84,9 +85,9 @@ h1,h2,h3,button,p,a{
     cursor: pointer;
 }
 .main-img {
-    margin-left: 900px;
-    margin-top: 100px;
-    animation: xAxis 6s cubic-bezier(0.02, 0.01, 0.21, 1);
+    margin-left: 1370px;
+    margin-top: 10px;
+    animation: xAxis 5s cubic-bezier(0.02, 0.01, 0.21, 1);
     animation-fill-mode: both;
 }
 .main-img:after {
@@ -95,19 +96,19 @@ h1,h2,h3,button,p,a{
     width: 292px;
     height:261px;
     background-image: url(img/Group\ 23.svg);
-    animation: yAxis 6s cubic-bezier(0.3,0.27,0.07,1.64);
+    animation: yAxis 5s cubic-bezier(0.3,0.27,0.07,1.64);
     animation-fill-mode: both;
 } 
 @keyframes yAxis{
     100%{
         animation-timing-function:cubic-bezier(0.02,0.01,0.21,1) ;
-        transform: translatey(500px);
+        transform: translatey(400px);
     }
 }
 @keyframes xAxis{
     100%{
         animation-timing-function:cubic-bezier(0.3,0.27,0.07,1.64) ;
-        transform: translatex(-900px);
+        transform: translatex(-1000px);
     }
 }
 .main-text{
@@ -328,6 +329,12 @@ span.center{
 .mail>p{
     font-size: 40px;
 }
+@media screen and (max-width:1700px) {
+    .main-img {
+        margin-left: 1100px;
+        margin-top: 50px;
+    }
+}
 @media screen and (max-width:1025px) {
     .iconBtn{
         display: block;
@@ -335,8 +342,16 @@ span.center{
     .nav-list{
         display: none;
     }
+    .main-img {
+        margin-left: 1000px;
+        margin-top: 50px;
+    }
 }
 @media screen and (max-width:980px) {
+    .main-img {
+        margin-left: 700px;
+        margin-top: 100px;
+    }
     .j-img>img{
         width: 354px;
         height: 352px;
