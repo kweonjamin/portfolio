@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blue;
+        }
+        .main-img {
+            margin-left: 500px;
+            margin-top: 100px;
+            animation: xAxis 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+        }
+        .main-img:after {
+            content: "";
+            display: block;
+            width: 292px;
+            height:261px;
+            background-image: url(img/Group\ 23.svg);
+
+            animation: yAxis 2.5s infinite cubic-bezier(0.3,0.27,0.07,1.64);
+        } 
+        @keyframes yAxis{
+            50%{
+                animation-timing-function:cubic-bezier(0.02,0.01,0.21,1) ;
+                transform: translatey(300px);
+            }
+        }
+        @keyframes xAxis{
+            50%{
+                animation-timing-function:cubic-bezier(0.3,0.27,0.07,1.64) ;
+                transform: translatex(-300px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-img">
+    </div>
+</body>
+</html>
