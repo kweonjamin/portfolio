@@ -175,10 +175,12 @@
                         <br>생각이 들어 시도하게 되었습니다.
                         <br>상품판매의 목적보단 코코도르 기업에 대한
                         <br>소개를 목적으로 만들었습니다.</p>
-                    <button>
-                        사이트로 이동
-                        <img src="img/Group 19.png" alt="">
-                    </button>
+                    <a href="https://kweonjamin.github.io/cocodor/" target="_blank">
+                        <button>
+                            사이트로 이동
+                            <img src="img/Group 19.png" alt="">
+                        </button>
+                    </a>
                 </div>
             </div>
             <div class="portfolio-main2">
@@ -195,10 +197,12 @@
                         <br>생각이 들어 시도하게 되었습니다.
                         <br>상품판매의 목적보단 코코도르 기업에 대한
                         <br>소개를 목적으로 만들었습니다.</p>
-                    <button>
-                        사이트로 이동
-                        <img src="img/Group 19.png" alt="">
-                    </button>
+                    <a href="" target="_blank">
+                        <button>
+                            사이트로 이동
+                            <img src="img/Group 19.png" alt="">
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -229,10 +233,12 @@
  
             /*img1을 클릭했을 때 img2를 보여줌*/
             $(".cocodor-btn").click(function(){
+                $(".portfolio-main").fadeIn( 2000 );
                 $(".portfolio-main").show();
                 $(".portfolio-main2").hide();
             });
             $(".portfolio-btn").click(function(){
+                $(".portfolio-main2" ).fadeIn( 2000 );
                 $(".portfolio-main").hide();
                 $(".portfolio-main2").show();
             });
