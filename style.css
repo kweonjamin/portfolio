@@ -33,7 +33,13 @@ h1,h2,h3,button,p,a{
     font-size: 28px;
 }
 .nav-list>li>a{
+    color: rgba(255, 255, 255, 0.5);;
+}
+.nav-list>li>a:hover{
     color: #F9F9F9;
+}
+.menuList>li>a>p:hover{
+    color: #98C4EB;
 }
 .iconBtn{
     cursor: pointer;

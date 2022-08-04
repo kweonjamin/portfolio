@@ -197,7 +197,7 @@
                         <br>생각이 들어 시도하게 되었습니다.
                         <br>상품판매의 목적보단 코코도르 기업에 대한
                         <br>소개를 목적으로 만들었습니다.</p>
-                    <a href="" target="_blank">
+                    <a href="https://kweonjamin.github.io/portfolio/" target="_blank">
                         <button>
                             사이트로 이동
                             <img src="img/Group 19.png" alt="">
@@ -233,12 +233,13 @@
  
             /*img1을 클릭했을 때 img2를 보여줌*/
             $(".cocodor-btn").click(function(){
-                $(".portfolio-main").fadeIn( 2000 );
+                
                 $(".portfolio-main").show();
                 $(".portfolio-main2").hide();
+                $(".portfolio-main").fadeIn( 1000 );
             });
             $(".portfolio-btn").click(function(){
-                $(".portfolio-main2" ).fadeIn( 2000 );
+                $(".portfolio-main2" ).fadeIn( 1000 );
                 $(".portfolio-main").hide();
                 $(".portfolio-main2").show();
             });
@@ -358,6 +359,10 @@
         
             return false;
         
+        });
+
+        $('.plan-img').click(function() {
+            location.reload();
         });
 </script>
 </html>
