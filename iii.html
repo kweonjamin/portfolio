@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <style type="text/css">
+    .rollImg {
+      display: none;
+      position: absolute;
+      left: 0px;
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+ 
+  <img class="rollImg" src="http://placehold.it/200/" style="top: 28px; display: none; height: 200px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
+  <img class="rollImg" src="http://placehold.it/200/FFF000" style="top: 67px; display: none; height: 200px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
+
+  <a href="" class="showImg">여기에 마우스를 올려보아요..</a>
+  <br />
+  <br />
+  <a href="" class="showImg">여기에 마우스를 올려보아요..</a>
+  <br>
+  <script type="text/javascript">
+    $(function () {
+      $('.showImg').hover(
+        function () {
+          $('.rollImg').eq($('.showImg').index(this)).css('top', $(this).offset().top + $(this).outerHeight() + 'px').stop().slideDown();
+        },
+        function () {
+          $('.rollImg').eq($('.showImg').index(this)).css('top', $(this).offset().top + $(this).outerHeight() + 'px').stop().slideUp();
+        }
+      );
+    });
+  </script>
+</body>
