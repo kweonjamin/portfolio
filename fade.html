@@ -9,22 +9,28 @@ $(function(){
   var ex_show = $('.ex_show');
   var ex_hide = $('.ex_hide');
   var ex_box = $('.ex_box');
+  var ex_box2 = $('.ex_box2');
   ex_show.click(function(){
     ex_box.fadeIn();
+    ex_box2.fadeOut();
   });
   ex_hide.click(function(){
     ex_box.fadeOut();
+    ex_box2.fadeIn();
   });
 });
 </script>
 <style type="text/css">
 .ex_show{float:left;margin-right:20px;cursor:pointer}
 .ex_hide{float:left;cursor:pointer}
+.ex_box2{clear:both; float:left; width:100px; height:50px; background-color:rgb(250, 19, 181); border:1px solid skyblue; margin:50px; border-radius:10px}
 .ex_box{clear:both; float:left; width:100px; height:50px; background-color:yellow; border:1px solid skyblue; margin:50px; border-radius:10px}</style>
+
 </head>
 <body>
 <b class="ex_show">show click!!</b>
 <b class="ex_hide">hide click!!</b>
 <div class="ex_box"></div>
+<div class="ex_box2"></div>
 </body>
 </html>

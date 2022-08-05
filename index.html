@@ -217,7 +217,7 @@
                 <img src="img/Group 24.png" alt="">
             </div>
             <div class="mail">
-                <h2>kweonjamin0@naver.com</h2>
+                <h2><span>kweonjamin0@naver.com</span></h2>
                 <p>메일을 보내주세요.</p>
             </div>
         </div>
@@ -231,17 +231,28 @@
             $(".portfolio-main").show();
             $(".portfolio-main2").hide();
  
-            /*img1을 클릭했을 때 img2를 보여줌*/
             $(".cocodor-btn").click(function(){
-                $(".portfolio-main" ).fadeIn( 1000 );
-                $(".portfolio-main").show();
-                $(".portfolio-main2").hide();
+                 $(".portfolio-main" ).fadeIn( 1000 );
+                 $(".portfolio-main").show();
+                 $(".portfolio-main2").hide();
             });
             $(".portfolio-btn").click(function(){
-                $(".portfolio-main2" ).fadeIn( 1000 );
+                 $(".portfolio-main2" ).fadeIn( 1000 );
                 $(".portfolio-main").hide();
                 $(".portfolio-main2").show();
             });
+        // var cocodorbtn = $('.cocodor-btn');
+        // var portfoliobtn = $('.portfolio-btn');
+        // var portfoliomain = $('.portfolio-main');
+        // var portfoliomain2 = $('.portfolio-main2');
+        // cocodorbtn.click(function(){
+        //     portfoliomain.fadeIn();
+        //     portfoliomain2.fadeOut();
+        // });
+        // portfoliobtn.click(function(){
+        //     portfoliomain.fadeOut();
+        //     portfoliomain2.fadeIn();
+        // });
         });
 
     let play = true;
@@ -257,6 +268,7 @@
             }
             play=false
         }
+        // 엘스로 올라갈때도 그래프 없어지게 만들기
     });
     function draw(max, classname, colorname){
        var i=1;
@@ -394,13 +406,13 @@
         $(document).ready(function() {
             $(window).scroll( function(){
             
-                $('section').each( function(i){
+                $('section,footer').each( function(){
 
                     var bottom_of_element = $(this).offset().top + $(this).outerHeight() / 3;
                     var bottom_of_window = $(window).scrollTop() + $(window).height();
 
                     if( bottom_of_window > bottom_of_element ){
-                        $(this).animate({'opacity':'1'},700);
+                        $(this).animate({'opacity':'1'},500);
                     }
 
                 }); 

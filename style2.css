@@ -1,3 +1,6 @@
+section,footer{
+	opacity: 0;
+}
 h1,h2,h3,button,p,a{
     font-family: 'Nanum Pen Script', cursive;
 }
@@ -334,17 +337,42 @@ span.center{
     display: flex;
     justify-content: center;
 }
+span {
+    position: relative;
+    font-weight: bold;
+    color: #fff;
+  }
+  span::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: #F9F9F9
+  }
+  .mail>h2:hover span::after {
+    width: 100%;
+    transition: width .3s;
+  }
 .mail{
     color: #F9F9F9;
     text-align: center;
     margin-top: 10px;
 }
-.mail>h2{
+.mail>h2>span:hover{
+    color: #F9F9F9;
+}
+.mail>h2>span{
     font-size: 62px;
     font-weight: 500;
+    cursor: pointer;
+    color: #E9F1F8;
 }
 .mail>p{
     font-size: 40px;
+    margin-top: 10px;
 }
 @media screen and (max-width:1700px) {
     .main-img {
@@ -531,11 +559,18 @@ span.center{
         width: 409px;
         height: 313px;
     }
-    .mail>h2{
+    .mail>h2>span{
         font-size: 50px;
     }
 }
 @media screen and (max-width:500px) {
+    .menuList{
+        margin-top: 33px;
+    }
+    .menuList>li>a>p{
+        font-size: 24px;
+        line-height: 51px;
+    }
     .main-img:after {
         width: 238px;
         height:213px;
@@ -553,6 +588,9 @@ span.center{
     }
     .plan-img>a>img{
         padding: 10px;
+    }
+    .about-text>p {
+        margin-right: 50px;
     }
     .skill-graph {
         width: 100px;
@@ -590,7 +628,7 @@ span.center{
         width: 346px;
         height: 265px;
     }
-    .mail>h2{
+    .mail>h2>span{
         font-size: 40px;
     }
 }
