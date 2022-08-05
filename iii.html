@@ -1,42 +1,78 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <style type="text/css">
-    .rollImg {
-      display: none;
-      position: absolute;
-      left: 0px;
-      width: 200px;
-    }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+  font-family: 'Cafe24Oneprettynight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  font: normal 1rem/1.5rem 'Cafe24Oneprettynight', serif;
+  background: url('https://images.unsplash.com/photo-1505312926838-645f295a20e1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1234&q=80')no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  padding: 50px;
+  background: rgba(0, 0, 0, .4);
+}
+p {
+  color: #aaa;
+  margin-bottom: 10px;
+}
+p:hover {
+  color: #fff
+}
+span {
+  position: relative;
+  font-weight: bold;
+  color: #fff;
+}
+span::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  background: rgba(200, 125, 220, .6);
+}
+p:hover span::after {
+  width: 100%;
+  transition: width .3s;
+}
+
   </style>
 </head>
-
 <body>
- 
-  <img class="rollImg" src="http://placehold.it/200/" style="top: 28px; display: none; height: 200px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
-  <img class="rollImg" src="http://placehold.it/200/FFF000" style="top: 67px; display: none; height: 200px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
-
-  <a href="" class="showImg">여기에 마우스를 올려보아요..</a>
-  <br />
-  <br />
-  <a href="" class="showImg">여기에 마우스를 올려보아요..</a>
-  <br>
-  <script type="text/javascript">
-    $(function () {
-      $('.showImg').hover(
-        function () {
-          $('.rollImg').eq($('.showImg').index(this)).css('top', $(this).offset().top + $(this).outerHeight() + 'px').stop().slideDown();
-        },
-        function () {
-          $('.rollImg').eq($('.showImg').index(this)).css('top', $(this).offset().top + $(this).outerHeight() + 'px').stop().slideUp();
-        }
-      );
-    });
-  </script>
+  <div class="wrapper">
+    <div class="box">
+      <p>홀로 별을 세던 언덕 슬픈 은하수 축제의 밤<br>
+      <span>나의 친구 캄파넬라</span> 어디까지라도 함께 떠나자   </p>
+      <p>수많은 마음과 또 마음이 부딪혀 우는 밤<br>
+        스쳐가는 만남과 또 <span>이별의 추억</span>으로</p>
+      <p>마젤란 은하행 열차 푸른 달의 뒤편을 지나<br>
+      <span>나의 친구 캄파넬라</span> 어디까지라도 함께 떠나자   </p>
+      <p>수많은 마음과 또 마음이 부딪혀 우는 밤<br>
+      스쳐가는 만남과 또 이별의 추억으로<br>
+      빛나는 <span>은빛 별들의 바다</span></p>
+     </div>
+  </div>
+  
 </body>
+</html>

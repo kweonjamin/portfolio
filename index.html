@@ -233,7 +233,7 @@
  
             /*img1을 클릭했을 때 img2를 보여줌*/
             $(".cocodor-btn").click(function(){
-                $(".portfolio-main2" ).fadeIn( 1000 );
+                $(".portfolio-main" ).fadeIn( 1000 );
                 $(".portfolio-main").show();
                 $(".portfolio-main2").hide();
             });
@@ -389,5 +389,22 @@
             clearInterval(tyInt); 
            } 
         }  
+
+
+        $(document).ready(function() {
+            $(window).scroll( function(){
+            
+                $('section').each( function(i){
+
+                    var bottom_of_element = $(this).offset().top + $(this).outerHeight() / 3;
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    if( bottom_of_window > bottom_of_element ){
+                        $(this).animate({'opacity':'1'},700);
+                    }
+
+                }); 
+            });
+        });
 </script>
 </html>
