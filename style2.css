@@ -117,6 +117,16 @@ h1,h2,h3,button,p,a{
         transform: translatex(-1000px);
     }
 }
+.typing {  
+    display: inline-block; 
+    animation-name: cursor; 
+    animation-duration: 0.3s;
+} 
+ @keyframes cursor{ 
+    0%{border-right: 2px solid #fff} 
+    50%{border-right: 2px solid rgba(255, 255, 255, 0.1);} 
+    100%{border-right: 2px solid #fff} 
+}
 .main-text{
     color: #F9F9F9;
     position: absolute;
@@ -128,6 +138,7 @@ h1,h2,h3,button,p,a{
     font-size: 120px;
     margin-bottom: 6px;
     font-weight: 500;
+    display: none;
 }
 .main-text>h2{
     font-size: 40px;
@@ -317,7 +328,7 @@ span.center{
 .footer-text>p{
     color: #F9F9F9;
     margin-top: 10px;
-    font-size: 42px;
+    font-size: 38px;
 }
 .footer-img{
     display: flex;
@@ -534,15 +545,14 @@ span.center{
         margin-left: 600px;
         margin-top: 100px;
     }
-    .main-text>h1{
-        font-size: 100px;
-        margin-bottom: 6px;
-    }
     .main-text>h2{
         font-size: 36px;
     }
     .main-text>p{
         font-size: 30px;
+    }
+    .plan-img>a>img{
+        padding: 10px;
     }
     .skill-graph {
         width: 100px;
